@@ -119,7 +119,6 @@ console.log(num);
 // num = num - 1;
 // console.log(num);
 
-
 let num = 10;
 num ++;
 num ++;
