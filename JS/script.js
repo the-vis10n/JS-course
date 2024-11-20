@@ -5,7 +5,7 @@
 // Определите в какую четверть часа попадает это число 
 // (в первую, вторую, третью или четвертую).
 let minute = 44;
-if (minute =>0 && minute <=15) {
+if (minute >=0 && minute <=15) {
     console.log('Первая четверть');
 }else if(minute >15 && minute <=30) {
     console.log('Вторая четверть');
@@ -22,10 +22,10 @@ if (minute =>0 && minute <=15) {
 // для ru - arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
 // для en - arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
 let lang = 'en'
-if (lang = 'ru'){
+if (lang === 'ru'){
     let arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
     console.log(arr)
-}else if (lang = 'en'){
+}else if (lang === 'en'){
     let arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn']
     console.log(arr)
 }
@@ -39,11 +39,11 @@ if (lang = 'ru'){
 let number = 222;
 if (number < 10) {
     console.log('Однозначное');
-}else if (number => 10 && number < 100){
+}else if (number >= 10 && number < 100){
     console.log('Двухзначное');
-}else if (number => 100 && number < 1000){
+}else if (number >= 100 && number < 1000){
     console.log('Трехзначное');
-}else if (number => 1000 && number < 10000){
+}else if (number >= 1000 && number < 10000){
     console.log('Четырехзначное');
 }
 // Пример 4
@@ -54,10 +54,10 @@ if (number < 10) {
 // выводиться сообщение, разрешающее переходить дорогу.
 let red = 'красный';
 let yellow = 'жёлтый';
-if (red = 'нет'){
+if (red == 'нет'){
     console.log('можно переходить дорогу');
 }
-if (yellow = 'нет'){
+if (yellow == 'нет'){
     console.log('можно переходить дорогу');
 }
 
