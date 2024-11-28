@@ -1,78 +1,84 @@
-// Домашнее задание
-// Выписать в комментариях. Вам необходимо найти все переменные,
-// функции, аргументы и параметры.
-// Запишите имена в соответсвующие пункты
-// Переменные:myDog years guests
-// Функции:dogYears makeTea 
-// Встроенные функции:secret
-// Аргументы:dogname, age cups, tea
-// Параметры:myDog, 4 guests, 'Earl Grey'
-// function dogYears(dogname, age){
-//     let years = age * 2;
-//     console.log(dogName + ' is ' + years + ' years old');
-// }
-// let myDog = 'Rex';
-// dogYears(myDog, 4);
+//Домашнее задание
+// Создайте объект city1 (var city1 = {}), укажите у него свойства name 
+// (название города, строка) со значением «ГородN» и population 
+// (населенность города, число) со значением 10 млн.
+let city1 = {}
+city1.name = "ГородN";
+city1.population = "10 млн";
+// Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
+let city2 = {
+name: "ГородM",
+population: 1e6
+};
+// Создайте у объектов city1 и city2 методы getName(), которые вернут 
+// соответствующие названия городов.
+function getName() {
+     return this.name; 
+    }
+    function getName() {
+        return this.name; 
+       }
+    city1.getName = getName;
+    city2.getName = getName;
+console.log(city1.getName)
 
-// function makeTea (cups, tea){
-//     console.log('Breawing ' + cups + ' cups of' + tea);
-// }
-// let guests = 2;
-// makeTea(guests, 'Earl Grey');
+// Создайте методы exportStr() у каждого из объектов. Этот метод должен 
+// возвращать информацию о городе в формате 
+// «name=ГородN\npopulation=10000000\n». Для второго города будет строка 
+// со своими значениями. Примечание: можно обращаться к каждому свойству 
+// через цикл for/in, но методы объекта возвращать не нужно.
+function exportStr() {
+    return `name=${this.name}\npopulation=${this.population}\n`;
+}
+city1.exportStr = exportStr;
+city2.exportStr = exportStr;
+// Создайте глобальную функцию getObj(), которая возвращает this. 
+// А у каждого из объектов city1 или city2 метод getCity, который 
+// ссылается на getObj. Проверьте работу метода. Примечание: к объекту 
+// вызова можно обратиться через this..
+function getObj() {
+    return this;
+}
+city1.getCity = getObj;
+city2.getCity = getObj;
 
-// function secret(){
-//     console.log('The secret of life is 28');
-// }
-// secret();
 
+// Создайте массив d1 с числовыми величинами 45,78,10,3.  
+// Добавьте в массив d1 еще одно число ( d1[7] = 100). 
+// Выведите в консоль весь массив и его элементы с индексами 6 и 7.
 
-// Дана строка 'JS'. Сделайте из нее строку 'js'.
-//let txt = 'JS';
-//console.log(txt.toLowerCase());
+let d1 = [45,78,10,3]
+d1.push(100)
+console.log(d1)
+console.log(d1.indexOf(6))
+console.log(d1.indexOf(7))
+// Создайте массив d2 с числовыми величинами 45,78,10,3. 
+// Посчитайте в переменную sum2 сумму чисел в нем, при помощи цикла for.
+let d2 = [45,78,10,3];
+function d2Sum(d2){
+let sum = 0;
+for(let i = 0; i < d2.length; i++){
+    sum += d2[i];
+    }
+console.log(sum);
+}
+d2Sum(d2);
+// Создайте массив d3 с числовыми величинами 45,78,10,3. 
+// Добавьте в массив d3 еще одно число (например, d[7] = 100) 
+// Посчитайте в переменную sum3 сумму чисел в нем, при помощи цикла for/in.
+let d3 = [45, 78, 10, 3]
+d3[7] = 100
+let sum3 = 0
+for(let el in d3) {
+    sum3 += d3[el]
+} 
+console.log(sum3) 
 
-// Дана строка 'я люблю JS!'. Вырежите из нее слово 
-// 'люблю' и слово 'javascript' тремя разными способами 
-// (через substr, substring, slice).
-    //let txt = 'я люблю JS!';
-    //console.log(txt.substring(2,10));
-    //console.log(txt.slice(2,10));
-
-// Дана строка 'я люблю JS!'. Найдите позицию 
-// подстроки 'люблю'.
-    //let txt = 'я люблю JS!';
-    //console.log(txt.indexOf('люблю'));
-
-// Дана переменная txt, в которой хранится какой-либо текст. 
-// Реализуйте обрезание длинного текста по следующему 
-// принципу: если количество символов этого текста больше 
-// заданного в переменной n, то в переменную result запишем 
-// первые n символов строки txt и добавим в конец 
-// троеточие '...'. В противном случае в переменную 
-// result запишем содержимое переменной txt.
-
-    //let txt = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //let n = txt.length
-    //if(n >= 5){
-    //    console.log(txt.substring(0,5) + '...')
-    //}
-    
-// Для решения задач данного блока вам понадобятся следующие 
-// методы: replace.
-// Дана строка 'Я-люблю-JS!'. 
-// Замените все  '-' на '!' с помощью глобального 
-// поиска и замены.
-
-    //let txt = 'Я-люблю-JS!'
-    //console.log(txt.replace(/-/g, '!'));
-
-// Дана строка 'я люблю JS'. С помощью метода split 
-// запишите каждое слово этой строки в отдельный элемент 
-// массива.
-    //let txt = 'я люблю JS'
-    //console.log(txt.split(' '))
-
-// Дана строка 'привет мир'. С помощью метода split 
-// запишите каждый символ этой строки в отдельный элемент 
-// массива.
-    let txt = 'привет мир'
-    console.log(txt.split(''))
+// Создайте массив d4 с числовыми величинами 45,78,10,3. 
+// Напишите функцию сортировки my(a,b), которая при вызове d4.sort(my) 
+// отсортирует элементы массива по убыванию чисел. Вызовите d4.sort(my)
+let d4 = [45,78,10,3];
+d4.soft(function my(a, b) {
+   return a - b; 
+});
+console.log(d4)
