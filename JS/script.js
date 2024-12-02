@@ -83,7 +83,7 @@
 //});
 //console.log(d4)
 
-ДЗ урок 22
+//ДЗ урок 22
 
 //Задача 1
 //function buttonClick() {
@@ -105,18 +105,19 @@
     //}
 
 //Задача 4
-//function buttonClick() {
-//document.forms.elements[0].value = 2 
-//document.forms.elements[1].value = 4
-//let span = document.getElementById('span');
-//span.innerHTML = '=6'
-//}
+function buttonClick() {
+    let elem1 = Number(document.forms.elements[0].value)
+    let elem2 = Number(document.forms.elements[1].value)
+    let result = elem1 + elem2;
+
+          document.getElementById("result").innerHTML = result;
+}
 
 //Задача 5
-let elem = document.getElementById('elem3');
-function buttonClick() {
-for(let i = 0; i<elem3.length; i++){
-             elem3[i].innerHTML = i+1;
-       }
-    }
+//let elem = document.getElementById('elem3');
+//function buttonClick() {
+//for(let i = 0; i<elem3.length; i++){
+ //            elem3[i].innerHTML = i+1;
+ //      }
+  //  }
 
